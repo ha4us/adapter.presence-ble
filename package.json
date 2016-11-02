@@ -1,0 +1,33 @@
+{
+  "name": "ha4us-adapter.presence-ble",
+  "version": "0.0.1",
+  "description": "A presence adapter for ha4us using a ble receiver",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "ha4us-base": "0.x"
+  },
+  "author": "",
+  "license": "MIT",
+  "ha4us": {
+    "guiAddon": false
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "ng-annotate-webpack-plugin": "^0.1.3",
+    "ng-cache-loader": "0.0.21",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "node-sass": "^3.10.1",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "eddystone-url-encoding": "^1.0.1",
+    "noble": "^1.7.0"
+  }
+}
