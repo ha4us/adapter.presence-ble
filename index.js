@@ -17,6 +17,7 @@
 			let retVal = super.configuration;
 			retVal.guiAddon = false;
 			retVal.maxInstances = 1;
+			retVal.image = 'logo.png';
 			return retVal;
 		}
 
