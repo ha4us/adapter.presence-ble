@@ -6,6 +6,12 @@ class GTag extends BLEDongle {
 		super(beaconIdent, name, timeout);
 	}
 
+	$destroy() {
+		if (this._connecting) {
+			this._peripheral.disconnect();
+		}
+	}
+
 	static get type() {
 		return 'beacon.gtag';
 	}
@@ -43,6 +49,7 @@ class GTag extends BLEDongle {
 				return;
 			}
 			this._connecting = true;
+			this._peripheral = peripheral;
 			peripheral.once('connect', (data) => {
 				this.log('GTAG %s connected', this.name, data);
 				this.emit('event', {

@@ -11,6 +11,9 @@ class BLEDongle extends EventEmitter {
 		this.beacon.type = this.constructor.type;
 		this._timer = null;
 	}
+	$destroy() {
+
+	}
 
 	static get type() {
 		return 'beacon.generic';

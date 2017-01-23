@@ -88,7 +88,11 @@
 			return super.pause()
 				.then(() => {
 					this._noble.stopScanning();
-					//return this._rfid.close();
+					this._beacons.forEach(beacon => {
+						beacon.$destroy();
+					});
+					this._beacons = [];
+
 				})
 				.then(() => this.status = 1);
 
@@ -135,7 +139,7 @@
 		registerBeacon(beacon) {
 
 			beacon.on('event', (data) => {
-				this.logger.warn('Event occurred', data);
+				this.logger.silly('Event occurred', data);
 				this.ha4us.states.put(data.val, this.topic + '/' + data.topic);
 			});
 		}
