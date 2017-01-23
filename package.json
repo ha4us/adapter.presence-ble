@@ -1,12 +1,12 @@
 {
   "name": "ha4us-adapter.presence-ble",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "description": "A presence adapter for ha4us using a ble receiver",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "peerDependencies": {
-    "ha4us-base": "0.x"
+    "ha4us-base": "0.2.x"
   },
   "author": "",
   "license": "MIT",

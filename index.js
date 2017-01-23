@@ -139,7 +139,7 @@
 		registerBeacon(beacon) {
 
 			beacon.on('event', (data) => {
-				this.logger.silly('Event occurred', data);
+				this.logger.debug('Event occurred', data);
 				this.ha4us.states.put(data.val, this.topic + '/' + data.topic);
 			});
 		}
