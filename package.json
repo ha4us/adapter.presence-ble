@@ -17,8 +17,11 @@
     ]
   },
   "ha4us": {
-    "guiAddon": false
-  },
+    "web":{
+      "image": "logo.png"
+    }
+  
+},
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",

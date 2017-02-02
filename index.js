@@ -12,13 +12,6 @@
 			//this._rfid = new RFIDReader(this.native.usbport);
     }
 
-    static get configuration() {
-      let retVal = super.configuration;
-      retVal.guiAddon = false;
-      retVal.maxInstances = 1;
-      retVal.image = 'logo.png';
-      return retVal;
-    }
 
     $init() {
       this._beacons = [];
