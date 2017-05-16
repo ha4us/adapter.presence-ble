@@ -9,14 +9,13 @@
 
     constructor(aHa4us, instanceObject) {
       super(aHa4us, instanceObject);
-			//this._rfid = new RFIDReader(this.native.usbport);
     }
 
 
     $init() {
       this._beacons = [];
 					//read existing devices and create tags
-      return this.ha4us.objects.get(this.topic + '/#', {
+      return this.$objects.get(this.topic + '/#', {
         type: 'device'
       }).catch((e) => {
         this.logger.warn('Problems reading presence devices', e);
@@ -106,7 +105,7 @@
 
       beacon.on('event', (data) => {
         this.logger.debug('Event occurred', data);
-        this.ha4us.states.put(data.val, this.topic + '/' + data.topic);
+        this.$states.put(data.val, this.topic + '/' + data.topic);
       });
     }
 
